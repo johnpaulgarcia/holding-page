@@ -1,5 +1,7 @@
 import React from "react";
 import "./left.css";
+import { FaArrowRight } from "react-icons/fa";
+
 const LeftTouch = ({ signup, contact }) => {
   return (
     <div className="left-div">
@@ -14,7 +16,7 @@ const LeftTouch = ({ signup, contact }) => {
       </div>
       <div className="btn-div">
         <button onClick={() => signup()} className="signup-btn btn">
-          Signup for Early Access
+          <span> Signup for Early Access</span> <FaArrowRight />
         </button>
         <button onClick={() => contact()} className="touch-btn btn">
           Get in touch
