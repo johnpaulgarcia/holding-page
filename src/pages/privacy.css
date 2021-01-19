@@ -10,7 +10,24 @@
     letter-spacing: 0px;
     color: #007FFF;
     opacity: 1;
+    
 }
+
+.back-div {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+
+.back-div > span, .back-div > svg {
+    align-self: center;
+    justify-self: center;
+}
+
+.back-div > svg {
+    color: #007FFF;
+}
+
+
 
 .privacy-div-content {
     width: 60%;
