@@ -1,0 +1,65 @@
+.left-div {
+    align-self: center;
+    justify-self: start;
+}
+
+.left-tag-1 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.left-tag-2 {
+    color: #fff;
+    font-size: 72px;
+    font-family: KansasNew;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.left-tag-3 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: bold;
+    margin-top: 0;
+    color: #0658B2;
+    margin-bottom: 56px;
+}
+
+.btn-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    width: 266px;
+    height: 44px;
+    margin-right: 16px;
+    background-color: #007FFF;
+    color: #fff;
+    background: #007FFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #0000001A;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.touch-btn {
+    box-shadow: 0px 3px 6px #0000001A;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    opacity: 1;
+    background-color: none;
+    color: #fff;
+}

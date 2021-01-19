@@ -1,0 +1,61 @@
+.privacy-div {
+    min-height: 100vh;
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.back-btn {
+    text-align: left;
+    font: normal normal normal 14px/48px Inter;
+    letter-spacing: 0px;
+    color: #007FFF;
+    opacity: 1;
+}
+
+.privacy-div-content {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 115px;
+    display: grid;
+}
+
+.pp-text {
+    text-align: left;
+    font: normal normal normal 48px/59px KansasNew;
+    letter-spacing: 0px;
+    color: #3E414B;
+    opacity: 1;
+    font-size: 59px;
+}
+
+.header-tag {
+    margin-top: 37px;
+    text-align: left;
+    font: normal normal bold 15px/18px Barlow;
+    letter-spacing: 0px;
+    color: #3E414B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.paragraph {
+    text-align: left;
+    font: normal normal normal 15px/18px Barlow;
+    letter-spacing: 0px;
+    color: #686C84;
+    opacity: 1;
+}
+
+.list-text {
+    text-align: left;
+    font: normal normal normal 15px/18px Barlow;
+    letter-spacing: 0px;
+    color: #686C84;
+}
+
+.list-tag {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #686C84;
+    opacity: 1;
+}

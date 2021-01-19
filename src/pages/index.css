@@ -1,0 +1,15 @@
+.content-div {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+
+}
+
+
+.content-left {
+    display: grid;
+    padding-left: 72px;
+}
+
+
