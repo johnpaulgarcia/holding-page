@@ -1,32 +1,138 @@
-import React from "react";
+import React, { useState } from "react";
+import Input from "./Input";
 import "./right.css";
 import "./contact.css";
 const Contact = ({ handleContact, closeContact }) => {
+  const [fname, setFN] = useState("");
+  const [lname, setLN] = useState("");
+  const [co, setCO] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [activeClass, setActiveClass] = useState("");
+  const [accept, setAccept] = useState(false);
+
+  const [errorFn, setErrorFn] = useState("");
+  const [errorLn, setErrorLn] = useState("");
+  const [errorCo, setErrorCo] = useState("");
+  const [errorEmail, setErrorEmail] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e) => {
+    let { target } = e;
+    let { value, name } = target;
+    console.log(name, value);
+    if (name === "firstname") {
+      setFN(value);
+      setErrorFn("");
+    } else if (name === "lastname") {
+      setLN(value);
+      setErrorLn("");
+    } else if (name === "company") {
+      setCO(value);
+      setErrorCo("");
+    } else if (name === "email") {
+      setEmail(value);
+      setErrorEmail("");
+    } else if (name === "message") {
+      setMessage(value);
+      setErrorMessage("");
+    }
+  };
+
   const doSignup = () => {
-    handleContact();
+    if (fname.length <= 0) {
+      setErrorFn("input-error");
+    }
+
+    if (lname.length <= 0) {
+      setErrorLn("input-error");
+    }
+
+    if (co.length <= 0) {
+      setErrorCo("input-error");
+    }
+
+    if (email.length <= 0) {
+      setErrorEmail("input-error");
+    }
+
+    if (message.length <= 0) {
+      setErrorMessage("input-error");
+    }
+
+    if (
+      notEmpty(fname) &&
+      notEmpty(lname) &&
+      notEmpty(co) &&
+      notEmpty(email) &&
+      notEmpty(message)
+    ) {
+      handleContact();
+    }
+  };
+
+  const notEmpty = (str) => {
+    return str.length > 0;
+  };
+
+  const handleBlur = ({ target: { value } }) => {
+    if (value.length <= 0) {
+      setActiveClass("input-error");
+    } else {
+      setActiveClass("");
+    }
   };
 
   return (
     <div className="form-div">
       <div className="form-div-content">
-        <span className="form-label">Get notified when we launch</span>
-        <form>
+        <span className="form-label">Get in touch</span>
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="form-name">
-            <input type="text" class="input" placeholder="First Name" />
-            <input type="text" class="input" placeholder="Last Name" />
+            <Input
+              placeholder="First Name"
+              name="firstname"
+              textvalue={fname}
+              handleChange={handleChange}
+              error={errorFn}
+            />
+            <Input
+              placeholder="Last Name"
+              name="lastname"
+              textvalue={lname}
+              handleChange={handleChange}
+              error={errorLn}
+            />
           </div>
           <div>
-            <input type="text" class="input fluid" placeholder="Company" />
+            <Input
+              placeholder="Company"
+              name="company"
+              textvalue={co}
+              handleChange={handleChange}
+              customClass="fluid"
+              error={errorCo}
+            />
           </div>
           <div>
-            <input type="text" class="input fluid" placeholder="Email" />
+            <Input
+              placeholder="Email"
+              name="email"
+              textvalue={email}
+              handleChange={handleChange}
+              customClass="fluid"
+              error={errorEmail}
+            />
           </div>
 
           <div>
             <textarea
+              name="message"
+              onChange={handleChange}
               rows={3}
               type="text"
-              class="input fluid tarea"
+              onBlur={handleBlur}
+              className={`input fluid tarea ${activeClass} ${errorMessage}`}
               placeholder="Message"
             />
           </div>

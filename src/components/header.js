@@ -9,7 +9,9 @@ const Header = () => {
         </a>
       </div>
       <div>
-        <button className="cancel-btn btn header-bold">Get in touch</button>
+        <a href="/">
+          <button className="cancel-btn btn header-bold">Get in touch</button>
+        </a>
       </div>
     </div>
   );

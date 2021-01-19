@@ -16,3 +16,10 @@ textarea {
     opacity: 1;
     padding-top: 10px;
 }
+
+.input-error {
+    background: #FBFBFB 0% 0% no-repeat padding-box;
+    border: 1px solid #FA676C;
+    border-radius: 5px;
+    opacity: 1;
+}

@@ -48,6 +48,11 @@ const App = () => {
     setContact(false);
   };
 
+  const closeAll = () => {
+    closeSignup();
+    closeContact();
+  };
+
   return (
     <Layout>
       <div className="content-div">
@@ -56,6 +61,9 @@ const App = () => {
         </div>
 
         <div className="content-right">
+          <span onClick={() => closeAll()} className="close-x-hover">
+            X
+          </span>
           {signup &&
             (!signedup ? (
               <RightForm
